@@ -10,12 +10,14 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" herf="./javascript.js">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 
 <body>
-    <div class="delay">
+    <div style="display:none;" id="dela" class="dela">
         <h1>There will be an animating image</h1>
+        <img src="cycle_3.png">
 
     </div>
 
@@ -28,7 +30,11 @@
 </body>
 
 <script>
-
+    $(document).ready(function () {
+        setTimeout(function () {
+            $("#dela").fadeIn("slow");
+        }, 2000);
+    });
 </script>
 
 <!-- Latest compiled and minified JavaScript -->

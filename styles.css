@@ -1,7 +1,3 @@
-body {
-    background-color: blue;
-}
-
 .tire {
     position: absolute;
     top: 190px;
@@ -48,9 +44,8 @@ body {
 }
 
 .delay {
-    opacity: 0;
-    animation: fadein 2s;
-    animation-delay: 1.5s;
+    animation: fadein 3s;
+    animation-delay: 2s;
 }
 
 
@@ -91,20 +86,38 @@ body {
 
 @keyframes cycle_move {
     0% {
-        transform: translate3d(-30rem, 0, 0rem);
+        transform: translate3d(-20rem, 0, 0rem);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
     }
 
     100% {
-        transform: translate3d(150rem, 0, 0rem);
+        opacity: 0;
+        transform: translate3d(120rem, 0, 0rem);
     }
 }
 
 @keyframes fadein {
     0% {
+        display: none;
         opacity: 0;
+    }
+
+    1% {
+        opacity: 0;
+        transform: scale(0);
+
+    }
+
+    99% {
+        display: block;
     }
 
     100% {
         opacity: 1;
+        transform: scale(1);
     }
 }
