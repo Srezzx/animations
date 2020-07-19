@@ -1,0 +1,110 @@
+body {
+    background-color: blue;
+}
+
+.tire {
+    position: absolute;
+    top: 190px;
+    left: -370px;
+    margin-top: 10%;
+    width: 7%;
+    animation-name: spin;
+    animation-duration: 200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.tire_2 {
+    position: absolute;
+    top: 190px;
+    left: -130px;
+    margin-top: 10%;
+    width: 7%;
+    animation-name: spin;
+    animation-duration: 200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.cycle_part {
+    position: absolute;
+    top: -20px;
+    left: -360px;
+    margin-top: 10%;
+    width: 20%;
+    animation-name: cycle_mov;
+    animation-duration: 20000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.divmove {
+    z-index: -100;
+    position: relative;
+    animation-name: cycle_move;
+    animation-duration: 2000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.delay {
+    opacity: 0;
+    animation: fadein 2s;
+    animation-delay: 1.5s;
+}
+
+
+@keyframes flicker {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes particle-animation-44 {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+
+    100% {
+        transform: translate3d(100px, 100px, 100px);
+    }
+}
+
+@keyframes cycle_move {
+    0% {
+        transform: translate3d(-30rem, 0, 0rem);
+    }
+
+    100% {
+        transform: translate3d(150rem, 0, 0rem);
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
